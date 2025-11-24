@@ -1,16 +1,20 @@
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { CheckCircle, Download, Mail } from "lucide-react";
-import { useNavigate } from "react-router-dom";
-import { useEffect } from "react";
+import { useNavigate, useParams } from "react-router-dom";
+import { useEffect, useState } from "react";
+import { getSearchParamsForLocation } from "react-router-dom/dist/dom";
 
 const Success = () => {
   const navigate = useNavigate();
-
+  const [download, setDownload] = useState(false);
+  // window.location.search
   useEffect(() => {
-    // Scroll to top on mount
-    window.scrollTo(0, 0);
-  }, []);
+    if(window.location.search.includes("download=true")){
+      setDownload(true);
+    }
+  }, [])
+  
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-background to-accent/20 flex items-center justify-center px-4">
@@ -68,15 +72,16 @@ const Success = () => {
             </div>
           </div>
 
-          <div className="space-y-4 m-4">
-            <a href="/vite.svg" download="e-calendar.pdf">
+          {download && (
+            <div className="space-y-4 m-4">
+            <a href="/bocal.pdf" download="e-calendar.pdf">
             <Button
               className="w-full md:w-auto bg-warm-gradient hover:opacity-90 text-primary-foreground shadow-glow px-8 py-6 text-lg"
             >
               Télécharger
             </Button>
             </a>
-          </div>
+          </div>)}
           <div className="space-y-4">
             <Button
               onClick={() => navigate("/")}
