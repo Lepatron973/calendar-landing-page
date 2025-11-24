@@ -48,7 +48,7 @@ const Success = () => {
               <Mail className="w-6 h-6 text-primary flex-shrink-0 mt-1" />
               <div>
                 <h3 className="font-semibold text-foreground mb-2">
-                  Vérifiez votre boîte mail
+                  Vérifiez votre boîte mail (et spam , on ne sait jamais !)
                 </h3>
                 <p className="text-muted-foreground">
                   Vous recevrez un email avec tous les détails de votre commande et
