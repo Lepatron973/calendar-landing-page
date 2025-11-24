@@ -64,9 +64,19 @@ const Success = () => {
                   est déjà dans votre email de confirmation.
                 </p>
               </div>
+              
             </div>
           </div>
 
+          <div className="space-y-4 m-4">
+            <a href="/vite.svg" download="e-calendar.pdf">
+            <Button
+              className="w-full md:w-auto bg-warm-gradient hover:opacity-90 text-primary-foreground shadow-glow px-8 py-6 text-lg"
+            >
+              Télécharger
+            </Button>
+            </a>
+          </div>
           <div className="space-y-4">
             <Button
               onClick={() => navigate("/")}
@@ -79,10 +89,10 @@ const Success = () => {
           <p className="text-sm text-muted-foreground mt-8">
             Un problème ? Contactez-nous à{" "}
             <a
-              href="mailto:support@example.com"
+              href="mailto:calendrier.avent@outlook.fr"
               className="text-primary hover:underline"
             >
-              support@example.com
+              calendrier.avent@outlook.fr
             </a>
           </p>
         </div>
