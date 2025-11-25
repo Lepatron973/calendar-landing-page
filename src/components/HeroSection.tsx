@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import heroJar from "@/assets/hero-jar.png";
+import heroJar from "@/assets/hero-jar.jpg";
 
 const HeroSection = () => {
   const phrases = [
